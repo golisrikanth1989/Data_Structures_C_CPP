@@ -19,9 +19,11 @@ if((msg_qid = msgget(DEFINED_KEY, IPC_CREAT | 0666)) < 0) {
 perror("msgget: ");
 exit(-1);
 }
-printf("Message Queue Id : %d" , msg_qid);
+printf("Message Queue Id : %d\n" , msg_qid);
 msg.mtype = 1;// for message type
 while(1) {
+printf("Enter ur data= ");
+
 gets(msg.content);
 if(msgsnd(msg_qid, &msg, sizeof(msg.content), 0) < 0) // last argu is 0 as wait else IPC_NOWAIT
 {perror("msgsnd: "); exit(-1);

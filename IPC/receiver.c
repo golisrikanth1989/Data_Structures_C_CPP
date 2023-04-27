@@ -25,6 +25,7 @@ while(1) {
 if(msgrcv(msg_qid, &msg, 256, 0, 0) < 0) {
 perror("msgrcv: "); exit(-1);
 }
+printf("Data Received= ");
 puts(msg.content);
 }
 }
