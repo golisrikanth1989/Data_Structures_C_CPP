@@ -11,12 +11,9 @@ void sig_handler(int signum){
  
 int main(){
  
-  signal(SIGALRM,sig_handler); // Register signal handler
+ alarm(0);  // Cancelled the previous alarm
  
-  alarm(2);  // Scheduled alarm after 2 seconds
-  alarm(0);  // Cancelled the previous alarm
- 
-  for(int i=1;;i++){
+  for(int i=1;;i++)
  
     printf("%d : Inside main function\n",i);
     sleep(1);  // Delay for 1 second
