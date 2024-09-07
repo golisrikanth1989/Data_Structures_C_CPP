@@ -17,13 +17,13 @@ Here we discuss the topics mentioned below
 |  |  |  |
 
 
-| Main Memory | ||
-| - | - | - |
+| Main Memory |
+| - |
 | Heap |
 | Stack |
 | Main: Main functon is called in stack memory for ecxecution
 | Code Section: Program is stored in this space with main() function
-|  |  |  |
+|  |
 
 
 ## 2. C \& C++ Essentials
